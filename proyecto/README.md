@@ -1,6 +1,6 @@
-#Proyecto visualización de Datos
+##Proyecto visualización de Datos
 
-##Tecnologias Usadas
+#Tecnologias Usadas
 
 1. Html5
 2. Bootstrap
