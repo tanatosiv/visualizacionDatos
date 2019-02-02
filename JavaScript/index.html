@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>youtube report!</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-light d-flex flex-row justify-content-start">
+            <!-- <a class="d-flex flex-row" href="#"> -->
+            <img src="https://img.peru21.pe/files/article_content_ec_fotos/uploads/2017/08/29/59a5c2d7072f0.jpeg"  
+            class="align-top img-fluid" alt="">
+            <p class="mb-0 ml-4">MyChannel Report</p>  </a>
+     </nav>
+    
+    <div id="top-videos" class="container-fluid" >
+       <div class="row"> 
+            <div class="col-6">
+                <table class="table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Views</th>
+                        <th>Watch Time</th>
+                        <th>Shares</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>Google Data Studio Makes Data Reporting Easy (0:44)</td>
+                            <td><div></div></td>
+                            <td>00:14:05</td>
+                            <td>0</td>
+
+                        </tr>
+                        <tr>
+                            <td>Google Data Studio Saves your time (0:44)</td>
+                            <td><div></div></td>
+                            <td>00:14:46</td>
+                             <td>0</td>
+    
+                        </tr>
+                        <tr>
+                            <td>Google Data Studio Makes Data Reporting Easy (0:44)</td>
+                            <td><div></div></td>
+                            <td>00:10:07</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                             <td>Register for Analitics Academy Today (1:44)</td>
+                             <td><div></div></td>           
+                             <td>00:14:05</td>            
+                             <td>3</td>
+                        </tr>
+                        <tr>
+                         <td>Welcome to Google Analytics for Beginners (3:44)</td>
+                         <td><div></div></td>
+                         <td>00:19:50</td>
+                         <td>8</td>
+                        </tr>   
+                         
+                        <tr>
+                                <td>Google Data Studio Makes Data Reporting Easy (0:44)</td>
+                                <td><div></div></td>
+                                <td>00:14:05</td>
+                                <td>12</td>
+                               </tr> 
+                               <tr>
+                                    <td>Google Data Studio Makes Data Reporting Easy (0:44)</td>
+                                    <td><div></div></td>
+                                    <td>00:14:05</td>
+                                    <td>12</td>
+                                   </tr> 
+                                   <tr>
+                                        <td>Google Data Studio Makes Data Reporting Easy (0:44)</td>
+                                        <td><div></div></td>
+                                        <td>00:14:05</td>
+                                        <td>12</td>
+                                       </tr> 
+                                       <tr>
+                                            <td>Google Data Studio Makes Data Reporting Easy (0:44)</td>
+                                            <td><div></div></td>
+                                            <td>00:14:05</td>
+                                            <td>12</td>
+                                           </tr> 
+                                           <tr>
+                                                <td>Google Data Studio Makes Data Reporting Easy (0:44)</td>
+                                                <td><div></div></td>
+                                                <td>00:14:05</td>
+                                                <td>12</td>
+                                               </tr> 
+                </tbody>
+        
+            </table>
+            </div> 
+            <div id="table" class="col-6" >
+
+                    <button id="button" type="button" class="btn btn-success">Intenta</button>
+
+
+            </div>
+        </div> 
+    </div>
+
+    <script>
+       
+       /* console.log(document);
+        console.log(document.body);
+        console.log(document.getElementById("table"));
+        console.log(document.getTextNode("Google Data Studio "));
+        console.log(document.createElement("td"));
+        console.log(document.createElement("tr"));
+        console.log(document.createElement("tbody"));
+        console.log(document.createElement("table"));*/
+    
+    /* objects*/
+
+    var button= document.getElementById("button");
+
+    button.addEventListener("click", function(){
+ addtable();
+    });
+
+
+    function addtable(){
+
+    var movies = [ 
+        
+        {
+            title:"Google Data Studio Makes Data Reporting Easy (0:44)", 
+            views: 18282,
+            watchTime: "00:12:23",
+            shares: 0
+    },
+        {   title:"Google Data Studio Saves your time (0:44)", 
+            views: 17901,
+            watchTime: "00:10:24",
+            shares: 1
+    },
+        {   title:"Google Data Studio Saves your time (0:44)", 
+            views: 17901,
+            watchTime: "00:10:24",
+            shares: 1
+    },
+        {   title:"Google Data Studio Saves your time (0:44)", 
+            views: 17901,
+            watchTime: "00:10:24",
+            shares: 1
+    },
+        {   title:"Google Data Studio Saves your time (0:44)", 
+            views: 17901,
+            watchTime: "00:10:24",
+            shares: 1
+    },
+        {   title:"Google Data Studio Saves your time (0:44)", 
+            views: 17901,
+            watchTime: "00:10:24",
+            shares: 1
+    },
+        {   title:"Google Data Studio Saves your time (0:44)", 
+            views: 17901,
+            watchTime: "00:10:24",
+            shares: 1
+    },
+        {   title:"Google Data Studio Saves your time (0:44)", 
+            views: 17901,
+            watchTime: "00:10:24",
+            shares: 1
+    },
+        {   title:"Google Data Studio Saves your time (0:44)", 
+            views: 17901,
+            watchTime: "00:10:24",
+            shares: 1
+    },
+        {   title:"Google Data Studio Saves your time (0:44)", 
+            views: 17901,
+            watchTime: "00:10:24",
+            shares: 1
+    },
+
+    
+    ]
+
+    console.log(movies);
+
+        var divTable= document.getElementById("table");
+        var title = document.createTextNode("Title");
+        var views = document.createTextNode("Views");
+        var watchTime = document.createTextNode("Watch Time");
+        var shares= document.createTextNode("shares");
+        
+        var th1= document.createElement("th");
+        var th2= document.createElement("th"); 
+        var th3= document.createElement("th");
+        var th4= document.createElement("th");
+        var tr= document.createElement("tr");
+
+        var thead= document.createElement("thead");
+        var table= document.createElement("table");
+        var tbody=document.createElement("tbody");
+        
+        th1.appendChild(title);
+        th2.appendChild(views);
+        th3.appendChild(watchTime);
+        th4.appendChild(shares);
+        tr.appendChild(th1);
+        tr.appendChild(th2);
+        tr.appendChild(th3);
+        tr.appendChild(th4);
+
+        thead.appendChild(tr);
+        table.appendChild(thead);
+            
+        movies.forEach(movie => {
+            var textNode1= document.createTextNode(movie.title);
+            var td1 = document.createElement("td");
+
+            var textNode2= document.createTextNode(movie.views);
+            var td2 = document.createElement("td");
+
+            var textNode3= document.createTextNode(movie.watchTime);
+            var td3 = document.createElement("td");
+
+            var textNode4= document.createTextNode(movie.shares);
+            var td4 = document.createElement("td"); 
+
+            var th= document.createElement("th");
+            var tr = document.createElement("tr");
+
+            td1.appendChild(textNode1);
+            td2.appendChild(textNode2);
+            td3.appendChild(textNode3);
+            td4.appendChild(textNode4);
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+
+            tbody.appendChild(thead);
+            tbody.appendChild(tr);
+            
+        });
+        
+        table.classList.add("table")
+              
+        table.appendChild(tbody);
+        table.appendChild(thead);
+        divTable.appendChild(table);
+               
+
+
+
+        // var textNode = document.createTextNode("Google Data Studio Makes Data Analitics ");
+        // var td = document.createElement("td");
+        // var th = document.createElement("th");
+        // var tr = document.createElement("tr");
+        // var tbody = document.createElement("tbody");
+        // var thead = document.createElement("thead");
+        // var table = document.createElement("table");
+        // var divTable = document.getElementById("table");
+        // var body = document.body;
+
+        // td.appendChild(textNode);
+        // tr.appendChild(td);
+        // tbody.appendChild(tr);
+        // thead.appendChild(document.createElement("tr"));
+        // table.appendChild(tbody);
+        // table.appendChild(thead);
+        // divTable.appendChild(table);
+
+            console.log()
+        }        
+
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300,400,700,900');
+
+    .navbar{
+        height: 100px;
+        background-color: white;
+    }
+
+    .navbar img{
+        width: 130px !important;
+        height: auto;
+    }
+
+    .navbar p{
+        font-size: 30px;
+        font-family: roboto;
+        color: rgb(97, 97, 97)
+    }
+
+    #top-videos{
+        min-height: 500px;
+        background: linear-gradient(rgb(211, 47, 47), rgb(255, 92, 92));
+    }
+    
+    #top-videos table{
+        color: white;
+        font-size: 14px;
+        font-family: roboto;
+    }
+
+    </style>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

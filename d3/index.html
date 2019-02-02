@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <title>D3.js</title>
+</head>
+
+<body>
+    <h1>D3.js</h1>
+
+    <h1>Reviews</h1>
+    <div id="reviews">
+
+    </div>
+
+    <script>
+        var h1 = d3.select("h1"); //tambien se puede usar sin var//
+        console.log(h1);
+
+        h1
+            .style("color", "blue")
+            .style("font-size", "70px")
+            .style("font-weight", "bold");
+
+
+
+        //total de asaltos en CDmx 2018 por mes.
+        var data = [10, 50, 80, 130, 340, 230, 150, 240, 320, 250, 260, 300]
+
+        var x = 0;
+
+        d3.select("body")
+            .append("svg")
+            .attr("width", "500")
+            .attr("height", "500")
+            .append("g")
+            .selectAll("rect")
+            .data(data)
+            .enter()
+            .append("rect")
+            .attr("x", function (d) {
+                x = x + 40; return x;
+            })
+            .attr("y", function (d) { return 500 - d - 40; })
+            .attr("width", "30")
+            .attr("height", function (d) {
+                return d;
+            }) //la funcion llamara los datos de cada rectagulo dato por dato
+            .style("fill", "green")
+
+
+        d3.dsv(",", "googleplaystore.csv")
+            .then(function (data) {
+                //aguas arvhivo muy grande
+                // data.forEach(function(d) {
+                //     console.log(d.Reviews);
+                // });
+
+                var reviews = [];
+
+                for (var i = 0; i < 20; i++) {
+                    console.log(data[i].Reviews);
+                    reviews.push(data[i].Reviews);
+                }
+
+                var x = 0;
+
+                d3.select("#reviews")
+                    .append("svg")
+                    .attr("width", "500")
+                    .attr("height", "500")
+                    .append("g")
+                    .selectAll("rect")
+                    .data(reviews)
+                    .enter()
+                    .append("rect")
+                    .attr("x", function (d) {
+                        x = x + 40; return x;
+                    })
+                    .attr("y", function (d) { return 500 - d - 40; })
+                    .attr("width", "30")
+                    .attr("height", function (d) {
+                        return Math.round(d / 224399 * 100);
+                    }) //la funcion llamara los datos de cada rectagulo dato por dato
+                    .style("fill", "green")
+
+                var prices = [];
+
+                for (var i = 2266; i < 2296; i++) {
+                    console.log(Math.round(data[i].Price.substring(1) / 20 * 100));
+                    prices.push(Math.round(data[i].Price.substring(1) / 10 * 100));
+                }
+
+                var x = 0;
+
+                d3.select("#prices")
+                    .append("svg")
+                    .attr("width", "500")
+                    .attr("height", "500")
+                    .append("g")
+                    .selectAll("rect")
+                    .data(reviews)
+                    .enter()
+                    .append("rect")
+                    .attr("x", function (d) {
+                        x = x + 40; return x;
+                    })
+                    .attr("y", function (d) { return 500 - d - 40; })
+                    .attr("width", "30")
+                    .attr("height", function (d) {
+                        return Math.round(d / 224399 * 100);
+                    }) //la funcion llamara los datos de cada rectagulo dato por dato
+                    .style("fill", "green")
+
+
+                var x = 0;
+
+                d3.select("#prices svg")
+                    .append("g")
+                        .attr("transform", "translate(0, 470)")
+                        .selectAll("rect")
+                        .data(prices)
+                        .enter()
+                    .append("text")
+                    .attr("x", function (d) { x = x + 40; return x; })
+                    .attr("y", "10")
+                    .attr("text-anchor", "right")
+                    .text(function (d) { return d; })
+                    .style("color", "black")
+
+            });
+
+    </script>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
