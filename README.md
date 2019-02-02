@@ -1,4 +1,4 @@
-#Curso de vislualización de Datos TelmexHub-Icat
+# Curso de visualización de Datos TelmexHub-Icat
 
 
 ## Tecnologias A usar:
