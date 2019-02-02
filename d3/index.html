@@ -20,7 +20,10 @@
 
     <h1>Reviews</h1>
     <div id="reviews">
+    </div>
 
+    <h1>Prices</h1>
+    <div id="prices">
     </div>
 
     <script>
@@ -58,17 +61,19 @@
             }) //la funcion llamara los datos de cada rectagulo dato por dato
             .style("fill", "green")
 
+            //read CSV
 
         d3.dsv(",", "googleplaystore.csv")
             .then(function (data) {
-                //aguas arvhivo muy grande
+                // aguas arvhivo muy grande
                 // data.forEach(function(d) {
                 //     console.log(d.Reviews);
                 // });
+            
 
                 var reviews = [];
 
-                for (var i = 0; i < 20; i++) {
+                for (var i = 0; i < 30; i++) {
                     console.log(data[i].Reviews);
                     reviews.push(data[i].Reviews);
                 }
@@ -77,23 +82,20 @@
 
                 d3.select("#reviews")
                     .append("svg")
-                    .attr("width", "500")
+                    .attr("width", "1000")
                     .attr("height", "500")
                     .append("g")
                     .selectAll("rect")
                     .data(reviews)
                     .enter()
                     .append("rect")
-                    .attr("x", function (d) {
-                        x = x + 40; return x;
-                    })
-                    .attr("y", function (d) { return 500 - d - 40; })
+                    .attr("x", function (d) {x = x + 40; return x; })
+                    .attr("y", function (d) { return 500 - Math.round(d / 73800 * 100) - 40; })
                     .attr("width", "30")
-                    .attr("height", function (d) {
-                        return Math.round(d / 224399 * 100);
-                    }) //la funcion llamara los datos de cada rectagulo dato por dato
-                    .style("fill", "green")
+                    .attr("height", function (d) {return Math.round(d / 73800 * 100);}) //la funcion llamara los datos de cada rectagulo dato por dato
+                    .style("fill", "blue")
 
+            //prices
                 var prices = [];
 
                 for (var i = 2266; i < 2296; i++) {
@@ -105,22 +107,18 @@
 
                 d3.select("#prices")
                     .append("svg")
-                    .attr("width", "500")
+                    .attr("width", "1000")
                     .attr("height", "500")
                     .append("g")
                     .selectAll("rect")
-                    .data(reviews)
+                    .data(prices)
                     .enter()
                     .append("rect")
-                    .attr("x", function (d) {
-                        x = x + 40; return x;
-                    })
-                    .attr("y", function (d) { return 500 - d - 40; })
+                    .attr("x", function (d) {x = x + 40; return x; })
+                    .attr("y", function (d) { return 500 - d  - 40; })
                     .attr("width", "30")
-                    .attr("height", function (d) {
-                        return Math.round(d / 224399 * 100);
-                    }) //la funcion llamara los datos de cada rectagulo dato por dato
-                    .style("fill", "green")
+                    .attr("height", function (d) {return d;}) //la funcion llamara los datos de cada rectagulo dato por dato
+                    .style("fill", "red")
 
 
                 var x = 0;
@@ -136,7 +134,7 @@
                     .attr("y", "10")
                     .attr("text-anchor", "right")
                     .text(function (d) { return d; })
-                    .style("color", "black")
+                    .style("color", "blue")
 
             });
 
